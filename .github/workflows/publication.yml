@@ -1,5 +1,5 @@
 # Publication d'une version de Merifa : les fichiers arrivent (découpés en morceaux de moins de 100 Mo)
-# sur une branche « envoi-<version> » ; ce flux les reconstitue, crée la publication GitHub
+# sur une branche « morceaux-<version> », puis la même révision est poussée sur « envoi-<version> » ; ce flux les reconstitue, crée la publication GitHub
 # (lue par Merifa pour se mettre à jour), puis supprime la branche d'envoi.
 name: Publication
 on:
@@ -33,5 +33,7 @@ jobs:
           files=$(ls | grep -v -x -e VERSION -e NOTES.md -e SHA256SUMS)
           gh release create "v$VERSION" -R "$GITHUB_REPOSITORY" --target main --latest \
             --title "Merifa $VERSION" --notes-file NOTES.md $files
-      - name: Suppression de la branche d'envoi
-        run: git push origin --delete "$GITHUB_REF_NAME"
+      - name: Suppression des branches d'envoi
+        run: |
+          git push origin --delete "$GITHUB_REF_NAME" || true
+          git push origin --delete "morceaux-${GITHUB_REF_NAME#envoi-}" || true
