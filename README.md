@@ -1,13 +1,8 @@
-# Merifa — téléchargements
+# Merifa
 
-Merifa gère le stockage de votre ordinateur et désinstalle proprement vos applications et jeux.
+Merifa gère le stockage de votre ordinateur et désinstalle proprement vos applications et jeux, restes compris.
 
-| Système | Fichier |
-|---|---|
-| Windows (installation) | `Merifa-Setup-<version>.exe` |
-| Windows (sans installation) | `Merifa-portable-<version>.exe` |
-| macOS (Intel et Apple Silicon) | `Merifa-<version>-mac-universal.dmg` |
+🛍️ **Disponible sur le Microsoft Store** — 1 mois d'essai gratuit, puis 2 € par mois, sans engagement.
 
-👉 Dernière version : [Publications](../../releases/latest)
-
-Une fois installée, Merifa se met à jour toute seule depuis ce dépôt. Le code source est privé.
+- 🔒 [Politique de confidentialité](CONFIDENTIALITE.md)
+- 💬 Assistance : [ouvrir une demande](../../issues)
