@@ -7,17 +7,14 @@ Merifa analyse le stockage de votre ordinateur, liste les applications installé
 **Toutes ces analyses restent sur votre ordinateur** : aucun nom de fichier, aucune liste d'applications, aucun contenu n'est envoyé ailleurs.
 
 ## Abonnement
-Pour vérifier l'abonnement, Merifa envoie à notre serveur de licences uniquement :
-- un **identifiant d'installation** aléatoire, créé par Merifa (il ne permet pas de vous identifier) ;
-- la **clé de licence** si vous en saisissez une.
-
-Le paiement se fait sur la page sécurisée de **Stripe**, dans votre navigateur. Merifa et notre serveur ne voient jamais vos coordonnées bancaires.
-Stripe conserve l'adresse e-mail et les informations de paiement nécessaires à l'abonnement, selon sa propre politique : https://stripe.com/fr/privacy
+L'abonnement (1 mois d'essai gratuit, puis 2 € par mois) est vendu et géré par **Microsoft**, dans le Microsoft Store.
+Merifa interroge seulement le Microsoft Store pour savoir si l'abonnement est actif : elle ne reçoit ni votre adresse e-mail ni vos coordonnées bancaires.
+Le paiement, les factures et la résiliation relèvent de Microsoft et de sa déclaration de confidentialité : https://privacy.microsoft.com/fr-fr/privacystatement
 
 ## Ce que nous ne faisons pas
 - Pas de publicité, pas de traceur, pas de revente de données.
 - Pas de collecte de fichiers, d'historique ou de données personnelles stockées sur votre ordinateur.
 
 ## Vos droits
-Vous pouvez résilier l'abonnement à tout moment (Merifa → Réglages → Abonnement → « Gérer ou résilier »).
-Pour toute question ou pour demander la suppression de vos données d'abonnement : ouvrez une demande sur https://github.com/Fefe-Kurylen/Merifa-releases/issues
+Vous pouvez résilier l'abonnement à tout moment depuis votre compte Microsoft (Merifa → Réglages → Abonnement → « Gérer ou résilier », ou account.microsoft.com/services).
+Pour toute question : ouvrez une demande sur https://github.com/Fefe-Kurylen/Merifa-releases/issues
