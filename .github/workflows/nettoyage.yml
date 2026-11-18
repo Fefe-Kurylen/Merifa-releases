@@ -1,0 +1,22 @@
+# Supprime les anciennes publications (Merifa est désormais distribuée par le Microsoft Store).
+# Déclenché par l'envoi d'une branche « nettoyage », supprimée ensuite.
+name: Nettoyage
+on:
+  push:
+    branches: ['nettoyage']
+permissions:
+  contents: write
+jobs:
+  nettoyage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Suppression des publications et de leurs étiquettes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for tag in $(gh release list -R "$GITHUB_REPOSITORY" --limit 100 --json tagName -q '.[].tagName'); do
+            gh release delete "$tag" -R "$GITHUB_REPOSITORY" -y --cleanup-tag && echo "supprimée : $tag"
+          done
+      - name: Suppression de la branche de déclenchement
+        run: git push origin --delete nettoyage
