@@ -1,4 +1,4 @@
-# Supprime les anciennes publications (Merifa est désormais distribuée par le Microsoft Store).
+# Supprime les anciennes publications (Merifa est désormais distribuée par le Microsoft Store) et les branches temporaires paquet-*.
 # Déclenché par l'envoi d'une branche « nettoyage », supprimée ensuite.
 name: Nettoyage
 on:
@@ -18,5 +18,8 @@ jobs:
           for tag in $(gh release list -R "$GITHUB_REPOSITORY" --limit 100 --json tagName -q '.[].tagName'); do
             gh release delete "$tag" -R "$GITHUB_REPOSITORY" -y --cleanup-tag && echo "supprimée : $tag"
           done
+      - name: Suppression des branches temporaires (paquets envoyés à l'Espace partenaires)
+        run: |
+          for b in $(git ls-remote --heads origin 'paquet-*' | sed 's#.*refs/heads/##'); do git push origin --delete "$b" && echo "supprimée : $b"; done
       - name: Suppression de la branche de déclenchement
         run: git push origin --delete nettoyage
