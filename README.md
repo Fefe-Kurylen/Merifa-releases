@@ -2,7 +2,7 @@
 
 Merifa gère le stockage de votre ordinateur et désinstalle proprement vos applications et jeux, restes compris.
 
-🛍️ **Disponible sur le Microsoft Store** — 1 mois d'essai gratuit, puis 1,99 € par mois, sans engagement.
+🛍️ **Disponible sur le Microsoft Store** — Tableau de bord et Stockage gratuits ; **Merifa Complet** débloque tout le reste à vie pour 4,99 € (achat unique, mises à jour comprises).
 
 - 🔒 [Politique de confidentialité](CONFIDENTIALITE.md)
 - 💬 Assistance : [ouvrir une demande](../../issues)
